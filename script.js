@@ -1,30 +1,15 @@
-// Smooth Scrolling
+// Smooth Scrolling with Cool Effect
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute('href'));
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
 
-// Scroll Fade-in Animation
-const fadeElements = document.querySelectorAll('.fade-in');
-
-function handleScroll() {
-    fadeElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        if (elementTop < window.innerHeight - 100) {
-            element.classList.add('visible');
-        }
-    });
-}
-
-window.addEventListener('scroll', handleScroll);
-handleScroll(); // Run on load
-
-// Dark Mode Toggle
+// Dark Mode Toggle (Fixed)
 const darkModeToggle = document.createElement('button');
-darkModeToggle.innerText = 'Toggle Dark Mode';
+darkModeToggle.innerText = '🌙 Toggle Dark Mode';
 darkModeToggle.style.position = 'fixed';
 darkModeToggle.style.top = '20px';
 darkModeToggle.style.right = '20px';
@@ -40,4 +25,30 @@ document.body.appendChild(darkModeToggle);
 
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+});
+
+// Load Dark Mode Preference
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+}
+
+// Parallax Effect for Sections
+window.addEventListener('scroll', function () {
+    document.querySelectorAll('section').forEach(section => {
+        let speed = section.dataset.speed || 0.5;
+        section.style.transform = `translateY(${window.scrollY * speed}px)`;
+    });
+});
+
+// Neon Glowing Cursor Effect
+document.addEventListener("mousemove", function (e) {
+    let cursor = document.createElement("div");
+    cursor.classList.add("cursor-glow");
+    cursor.style.left = `${e.pageX}px`;
+    cursor.style.top = `${e.pageY}px`;
+    document.body.appendChild(cursor);
+    setTimeout(() => {
+        cursor.remove();
+    }, 300);
 });
