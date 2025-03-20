@@ -1,140 +1,112 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;600&display=swap');
+/* Import Elegant Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/* 🎆 Cyberpunk Background */
 body {
-    font-family: 'Orbitron', sans-serif;
-    background: radial-gradient(circle at top, #0d0d0d, #181818, #000);
-    color: #ffffff;
-    overflow-x: hidden;
-    transition: all 0.4s ease-in-out;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* 🚀 Neon Navigation */
+/* 🌟 Navigation Bar */
 nav {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 0;
+    background: white;
+    padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
-    text-align: center;
-    box-shadow: 0 0 10px #00ffee;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
-    color: #00ffee;
+    color: #333;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     font-weight: 600;
-    font-size: 1.2em;
-    transition: color 0.3s, text-shadow 0.3s;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
-    color: #ff0077;
-    text-shadow: 0px 0px 8px #ff0077;
+    color: #007bff;
 }
 
-/* 🔥 Hero Section with Floating Glow */
+/* 🔥 Hero Section */
 header {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(45deg, #00ffee, #00aaff, #0066ff);
-    color: white;
-    font-size: 2.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
-    animation: glow 2s infinite alternate;
-    border-radius: 0 0 50px 50px;
+    padding: 120px 20px 60px;
+    background: white;
+    font-size: 2.2em;
+    font-weight: 600;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
-    }
-    to {
-        text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
-    }
+/* ✨ Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
 }
 
-/* 🎭 Futuristic Sections */
-section {
-    width: 80%;
-    margin: auto;
-    padding: 50px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
-    text-align: center;
-    transition: transform 0.3s;
-    backdrop-filter: blur(10px);
-    margin-top: 50px;
-}
-
-section:hover {
-    transform: scale(1.05);
-}
-
-/* 🎮 Sci-Fi Buttons */
-button {
-    background: linear-gradient(45deg, #ff0077, #ff00ff);
-    color: white;
-    border: none;
-    padding: 15px 30px;
+.project {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    font-size: 1.3em;
-    border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 0px 15px #ff0077;
 }
 
-button:hover {
-    background: linear-gradient(45deg, #ff00ff, #ff0077);
-    box-shadow: 0px 0px 25px #ff0077;
-    transform: translateY(-3px);
+.project:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* 🌙 Dark Mode */
 .dark-mode {
-    background: linear-gradient(to right, #121212, #000);
-    color: #00ffee;
+    background-color: #222;
+    color: #f5f5f5;
 }
 
 .dark-mode nav {
-    background: rgba(20, 20, 20, 0.9);
-    box-shadow: 0 0 10px #ff0077;
+    background: #333;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
-.dark-mode section {
-    background: rgba(30, 30, 30, 0.8);
-    box-shadow: 0px 0px 15px #ff0077;
+.dark-mode .project {
+    background: #333;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
-.dark-mode button {
-    background: linear-gradient(45deg, #00ffee, #0099ff);
-    box-shadow: 0px 0px 15px #00ffee;
+.dark-mode .project:hover {
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.2);
 }
 
-.dark-mode button:hover {
-    background: linear-gradient(45deg, #0099ff, #00ffee);
-    box-shadow: 0px 0px 25px #00ffee;
+/* 🎭 Smooth Fade-In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* ⚡ Floating Glow Effect */
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(10px); }
-    100% { transform: translateY(0px); }
-}
-
-.floating {
-    animation: floating 3s infinite ease-in-out;
+.project {
+    animation: fadeIn 0.6s ease-in-out;
 }
