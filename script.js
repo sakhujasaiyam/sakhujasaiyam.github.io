@@ -1,4 +1,4 @@
-// Smooth Scrolling Effect
+// Smooth Scrolling
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -7,7 +7,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Fade-in animation when scrolling
+// Scroll Fade-in Animation
 const fadeElements = document.querySelectorAll('.fade-in');
 
 function handleScroll() {
@@ -20,4 +20,24 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
-handleScroll();  // Run on load to check if elements are already visible
+handleScroll(); // Run on load
+
+// Dark Mode Toggle
+const darkModeToggle = document.createElement('button');
+darkModeToggle.innerText = 'Toggle Dark Mode';
+darkModeToggle.style.position = 'fixed';
+darkModeToggle.style.top = '20px';
+darkModeToggle.style.right = '20px';
+darkModeToggle.style.padding = '10px 15px';
+darkModeToggle.style.borderRadius = '20px';
+darkModeToggle.style.background = '#222';
+darkModeToggle.style.color = 'white';
+darkModeToggle.style.cursor = 'pointer';
+darkModeToggle.style.border = 'none';
+darkModeToggle.style.zIndex = '1000';
+
+document.body.appendChild(darkModeToggle);
+
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
