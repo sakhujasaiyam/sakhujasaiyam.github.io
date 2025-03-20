@@ -1,54 +1,30 @@
-// Smooth Scrolling with Cool Effect
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetSection = document.querySelector(this.getAttribute('href'));
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-});
-
-// Dark Mode Toggle (Fixed)
+// 🌙 Dark Mode Toggle
 const darkModeToggle = document.createElement('button');
 darkModeToggle.innerText = '🌙 Toggle Dark Mode';
 darkModeToggle.style.position = 'fixed';
-darkModeToggle.style.top = '20px';
+darkModeToggle.style.bottom = '20px';
 darkModeToggle.style.right = '20px';
 darkModeToggle.style.padding = '10px 15px';
-darkModeToggle.style.borderRadius = '20px';
-darkModeToggle.style.background = '#222';
-darkModeToggle.style.color = 'white';
-darkModeToggle.style.cursor = 'pointer';
+darkModeToggle.style.borderRadius = '5px';
 darkModeToggle.style.border = 'none';
-darkModeToggle.style.zIndex = '1000';
+darkModeToggle.style.cursor = 'pointer';
+darkModeToggle.style.background = '#007bff';
+darkModeToggle.style.color = '#fff';
 
 document.body.appendChild(darkModeToggle);
 
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    darkModeToggle.innerText = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
 });
 
-// Load Dark Mode Preference
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
-
-// Parallax Effect for Sections
-window.addEventListener('scroll', function () {
-    document.querySelectorAll('section').forEach(section => {
-        let speed = section.dataset.speed || 0.5;
-        section.style.transform = `translateY(${window.scrollY * speed}px)`;
+// 🏆 Hover Effect for Projects
+document.querySelectorAll('.project').forEach(project => {
+    project.addEventListener('mouseenter', () => {
+        project.style.transform = 'translateY(-10px) scale(1.02)';
     });
-});
 
-// Neon Glowing Cursor Effect
-document.addEventListener("mousemove", function (e) {
-    let cursor = document.createElement("div");
-    cursor.classList.add("cursor-glow");
-    cursor.style.left = `${e.pageX}px`;
-    cursor.style.top = `${e.pageY}px`;
-    document.body.appendChild(cursor);
-    setTimeout(() => {
-        cursor.remove();
-    }, 300);
+    project.addEventListener('mouseleave', () => {
+        project.style.transform = 'translateY(0) scale(1)';
+    });
 });
