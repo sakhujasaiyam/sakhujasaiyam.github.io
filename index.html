@@ -3,63 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saiyam Sakhuja - Quantum Researcher</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #333; color: white; text-align: center; padding: 20px; }
-        nav { display: flex; justify-content: center; background: #444; padding: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        section { padding: 20px; }
-        footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-    </style>
+    <title>Saiyam Sakhuja | Quantum Researcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Saiyam Sakhuja</h1>
-        <p>Quantum Computing | AI | Research</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#skills">Skills</a>
-        <a href="#achievements">Achievements</a>
-    </nav>
+    <section id="hero">
+        <h1>Saiyam Sakhuja</h1>
+        <h2>Quantum Researcher & Machine Learning Enthusiast</h2>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </section>
     
     <section id="about">
-        <h2>About</h2>
-        <p>M.Sc. Physics graduate from NIT Tiruchirappalli with a passion for Quantum Computing and AI.</p>
+        <h2>About Me</h2>
+        <p>Quantum Application Engineer | Researcher in Quantum Machine Learning & Neuroscience Applications</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>M.Sc. Physics</strong>, NIT Tiruchirappalli (2021-2023) - CGPA: 8.85</p>
+        <p><strong>B.Sc. Physics (Hons.)</strong>, University of Delhi (2018-2021) - CGPA: 8.14</p>
     </section>
     
     <section id="experience">
         <h2>Experience</h2>
-        <p>Quantum Application Engineer at CDAC, Research Intern at Naxon Labs, and more.</p>
+        <div class="job">
+            <h3>Centre for Development of Advanced Computing (CDAC), Noida</h3>
+            <p>Quantum Application Engineer (Sept. 2024 - Present)</p>
+            <ul>
+                <li>Developed quantum algorithms for weather forecasting using QNNs, QLSTMs, and QGRUs.</li>
+                <li>Explored quantum image representation techniques for feature extraction.</li>
+            </ul>
+        </div>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <p>Quantum-GRU for weather forecasting, Molecular Dynamics for Lennard-Jones Potential, and more.</p>
+        <ul>
+            <li><strong>Quantum-GRU for Time-Series Forecasting</strong> - Developed QGRUs and QLSTMs for weather forecasting.</li>
+            <li><strong>Water Potability with Quantum & AI</strong> - Hybrid Quantum+AI model for water potability prediction.</li>
+        </ul>
     </section>
     
     <section id="publications">
         <h2>Publications</h2>
-        <p>Published research on Quantum Voting Protocols, Quantum Image Representations, and Quantum Materials.</p>
+        <ul>
+            <li><a href="https://arxiv.org/abs/2406.19730">Quantum-Enhanced Secure Approval Voting Protocol</a></li>
+            <li><a href="https://doi.org/10.1109/COMSNETS63942.2025.10885744">Benchmarking Quantum Image Representations</a></li>
+        </ul>
     </section>
     
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>Python, Qiskit, Pennylane, Cirq, PyTorch, and more.</p>
-    </section>
-    
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <p>Finalist at Womanium Quantum+AI Climate Simulation, COMSNETS 2025 presenter.</p>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:quantum.saiyam@gmail.com">quantum.saiyam@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/saiyam-sakhuja/">Saiyam Sakhuja</a></p>
     </section>
     
     <footer>
-        <p>Contact: quantum.saiyam@gmail.com | LinkedIn | GitHub</p>
+        <p>&copy; 2025 Saiyam Sakhuja | Designed with Quantum Inspiration</p>
     </footer>
 </body>
 </html>
