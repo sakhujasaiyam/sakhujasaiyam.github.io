@@ -213,16 +213,6 @@ footer {
     }
 }
 
-/* .hero h1 .typed-name {   Removed this whole block */
-/* font-family: 'Courier New', monospace; */
-/* overflow: hidden; */
-/* white-space: nowrap; */
-/* border-right: 2px solid #333; */
-/* width: 0; */
-/* animation: typing 2s steps(20, end) forwards; */
-/* display: inline-block;  */
-/* } */
-
 /* Scroll to top button */
 .scroll-to-top {
     display: none;
@@ -241,4 +231,46 @@ footer {
 
 .scroll-to-top:hover {
     background-color: #0056b3;
+}
+
+/* Publications */
+#publications {
+    background-color: #fff;
+}
+
+.publication-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+}
+
+#publications h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.co-author {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.abstract {
+    margin-bottom: 10px;
+}
+
+#publications a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#publications a:hover {
+    text-decoration: underline;
 }
