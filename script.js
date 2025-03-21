@@ -32,6 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.scrollY > 300) {
             scrollToTopBtn.style.display = 'block';
         } else {
-            scrollToTopBtn.style.display
-        }
-    })
+        scrollToTopBtn.style.display = 'none'; 
+    }
+})
