@@ -34,4 +34,4 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             scrollToTopBtn.style.display
         }
-    }
+    })
