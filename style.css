@@ -124,19 +124,27 @@ section h2 {
 /* Experience */
 #experience {
     background-color: #f9f9f9;
+    overflow: hidden; /* Hide overflowing cards */
+}
+
+.experience-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth slide */
+    width: 400%; /* Adjust based on the number of cards */
 }
 
 .experience-item {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    border-left: 5px solid #007bff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    width: 25%; /* Adjust based on the number of cards */
+    flex-shrink: 0; /* Prevent cards from shrinking */
 }
 
 .experience-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Rise effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .date {
@@ -160,6 +168,54 @@ section h2 {
 
 .project-item:hover {
     transform: translateY(-5px);
+}
+
+.date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Publications */
+#publications {
+    background-color: #fff;
+}
+
+.publication-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+}
+
+#publications h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.co-author {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.abstract {
+    margin-bottom: 10px;
+}
+
+#publications a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#publications a:hover {
+    text-decoration: underline;
 }
 
 /* Skills */
@@ -209,68 +265,4 @@ footer {
     }
 
     to {
-        width: 100%;
-    }
-}
-
-/* Scroll to top button */
-.scroll-to-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.scroll-to-top:hover {
-    background-color: #0056b3;
-}
-
-/* Publications */
-#publications {
-    background-color: #fff;
-}
-
-.publication-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.publication-item:hover {
-    transform: translateY(-5px);
-}
-
-#publications h3 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.co-author {
-    font-style: italic;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.abstract {
-    margin-bottom: 10px;
-}
-
-#publications a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-#publications a:hover {
-    text-decoration: underline;
-}
+        width: 100
