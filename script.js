@@ -1,3 +1,4 @@
+console.log("JS Loaded");
 document.addEventListener("DOMContentLoaded", function () {
     gsap.from("nav ul li", { opacity: 0, y: -20, duration: 1, stagger: 0.2 });
     gsap.from("header h1, header p", { opacity: 0, y: 30, duration: 1, delay: 0.5 });
