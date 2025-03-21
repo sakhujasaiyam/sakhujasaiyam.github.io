@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let currentIndex = 0;
     let slideInterval;
-    const slideDuration = 3000; // Time between slides (milliseconds)
+    const slideDuration = 5000; // Time each slide stays (milliseconds)
 
     // Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
@@ -61,21 +61,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Initialize slider and animation
-    slideTo(currentIndex); // Show the first card
+    slideTo(currentIndex);
     startSlideInterval();
 
     // Hover effect
     experienceSlider.addEventListener('mouseenter', () => {
         stopSlideInterval();
         experienceItems.forEach(item => {
-            item.style.transition = 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out'; // Re-apply transitions
+            item.style.transition = 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out';
         });
     });
 
     experienceSlider.addEventListener('mouseleave', () => {
         startSlideInterval();
         experienceItems.forEach(item => {
-            item.style.transition = 'transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out'; // Re-apply transitions
+            item.style.transition = 'transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out';
         });
     });
 });
