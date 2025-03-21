@@ -14,69 +14,68 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.15
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                nav.style.transform = 'translateY(-100%)';
-            } else {
-                nav.style.transform = 'translateY(0)';
-            }
-
-            // Show/hide scroll to top button
-            if (window.scrollY > 300) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
             }
         });
+    }, {
+        threshold: 0.15
+    });
 
-        // Experience slider functions
-        function slideTo(index) {
-            experienceSlider.style.transform = `translateX(${-index * 100}%)`;
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            nav.style.transform = 'translateY(-100%)';
+        } else {
+            nav.style.transform = 'translateY(0)';
         }
 
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % experienceItems.length;
-            slideTo(currentIndex);
+        // Show/hide scroll to top button
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
         }
+    });
 
-        function startSlideInterval() {
-            slideInterval = setInterval(nextSlide, slideDuration);
-        }
+    // Experience slider functions
+    function slideTo(index) {
+        experienceSlider.style.transform = `translateX(${-index * 100}%)`;
+    }
 
-        function stopSlideInterval() {
-            clearInterval(slideInterval);
-        }
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % experienceItems.length;
+        slideTo(currentIndex);
+    }
 
-        // Initialize slider and animation
-        slideTo(currentIndex); // Show the first card
-        startSlideInterval();
+    function startSlideInterval() {
+        slideInterval = setInterval(nextSlide, slideDuration);
+    }
 
-        // Hover effect
-        experienceSlider.addEventListener('mouseenter', () => {
-            stopSlideInterval();
-            experienceItems.forEach(item => {
-                item.style.transition = 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out'; // Re-apply transitions
-            });
-        });
+    function stopSlideInterval() {
+        clearInterval(slideInterval);
+    }
 
-        experienceSlider.addEventListener('mouseleave', () => {
-            startSlideInterval();
-            experienceItems.forEach(item => {
-                item.style.transition = 'transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out'; // Re-apply transitions
-            });
+    // Initialize slider and animation
+    slideTo(currentIndex); // Show the first card
+    startSlideInterval();
+
+    // Hover effect
+    experienceSlider.addEventListener('mouseenter', () => {
+        stopSlideInterval();
+        experienceItems.forEach(item => {
+            item.style.transition = 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out'; // Re-apply transitions
         });
     });
+
+    experienceSlider.addEventListener('mouseleave', () => {
+        startSlideInterval();
+        experienceItems.forEach(item => {
+            item.style.transition = 'transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out'; // Re-apply transitions
+        });
+    });
+});
