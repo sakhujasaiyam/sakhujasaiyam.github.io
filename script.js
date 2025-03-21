@@ -1,29 +1,10 @@
-// Wait for the DOM to fully load
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("JS Loaded");
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+    let delay = 0.2; // Initial delay in seconds
 
-    // Ensure GSAP and ScrollTrigger are available
-    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-        console.error("GSAP or ScrollTrigger not loaded.");
-        return;
-    }
-
-    // Register GSAP ScrollTrigger Plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Apply fade-in animation to sections
-    gsap.utils.toArray("section.fade-in").forEach((section) => {
-        gsap.from(section, {
-            scrollTrigger: {
-                trigger: section,
-                start: "top 85%",
-                toggleActions: "play none none reverse"
-            },
-            opacity: 0,
-            y: 50,
-            duration: 1
-        });
+    sections.forEach(function(section, index) {
+        setTimeout(function() {
+            section.classList.add('show');
+        }, delay * 1000 * (index + 1)); // Delay each section
     });
-
-    console.log("GSAP animations applied successfully.");
 });
