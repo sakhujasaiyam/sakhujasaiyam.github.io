@@ -213,15 +213,15 @@ footer {
     }
 }
 
-.hero h1 .typed-name {  /* Increased specificity */
-    font-family: 'Courier New', monospace;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid #333;
-    width: 0;
-    animation: typing 2s steps(20, end) forwards;
-    display: inline-block; /* Ensure it behaves correctly with the animation */
-}
+/* .hero h1 .typed-name {   Removed this whole block */
+/* font-family: 'Courier New', monospace; */
+/* overflow: hidden; */
+/* white-space: nowrap; */
+/* border-right: 2px solid #333; */
+/* width: 0; */
+/* animation: typing 2s steps(20, end) forwards; */
+/* display: inline-block;  */
+/* } */
 
 /* Scroll to top button */
 .scroll-to-top {
