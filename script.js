@@ -33,3 +33,4 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollToTopBtn.style.display = 'block';
         } else {
             scrollToTopBtn.style.display
+        }
