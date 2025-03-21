@@ -83,3 +83,16 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+body {
+    color: #333; /* Dark gray text */
+    background-color: #fff; /* White background */
+}
+
+section {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222; /* Slightly darker text for headings */
+}
