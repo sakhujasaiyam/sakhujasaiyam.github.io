@@ -1,146 +1,81 @@
-/* General Styling */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #f8f9fa;
     color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+/* Header */
+header {
+    background: #0056b3;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-/* Container */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Navigation Bar */
+/* Navigation */
 nav {
-    background: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    padding: 10px;
+    background: #004494;
 }
 
-nav ul li a {
+nav a {
+    color: white;
     text-decoration: none;
+    margin: 0 15px;
     font-size: 18px;
-    color: #333;
-    padding: 5px 10px;
-    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+nav a:hover {
+    color: #ffcc00;
 }
 
-/* Header Section */
-h1 {
-    font-size: 2.5rem;
-    margin-top: 80px;
+/* Section Styling */
+section {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    border-bottom: 3px solid #0056b3;
+    padding-bottom: 5px;
+    color: #0056b3;
 }
 
-/* Get in Touch Button */
-.get-in-touch {
+/* Buttons & Links */
+a.button {
     display: inline-block;
-    background: #007bff;
-    color: white;
     padding: 10px 20px;
+    background: #0056b3;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.get-in-touch:hover {
-    background: #0056b3;
+a.button:hover {
+    background: #ffcc00;
+    color: #333;
 }
 
-/* Sections */
-section {
-    margin: 30px 0;
+/* Footer */
+footer {
+    text-align: center;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Dark Mode Styles */
-.dark-mode nav {
-    background: #1e1e1e;
-}
-
-.dark-mode section {
-    background: #1e1e1e;
-    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Dark Mode Toggle */
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-size: 16px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.dark-mode-toggle:hover {
-    background: #0056b3;
-}
-
-.dark-mode .dark-mode-toggle {
-    background: #ffa500;
-}
-
-/* Project Cards */
-.project-card {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Dark Mode Adjustments */
-.dark-mode .project-card {
-    background: #1e1e1e;
-    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode .project-card:hover {
-    box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.2);
+    background: #004494;
+    color: white;
+    margin-top: 40px;
 }
