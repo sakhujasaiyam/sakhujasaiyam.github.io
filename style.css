@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
 .container {
@@ -214,6 +214,7 @@ footer {
 }
 
 .typed-name {
+    font-family: 'Courier New', monospace; /* Typewriter font */
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid #333;
