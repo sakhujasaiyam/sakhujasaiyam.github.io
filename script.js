@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.scrollY > 300) {
             scrollToTopBtn.style.display = 'block';
         } else {
-        scrollToTopBtn.style.display = 'none'; 
-    }
-})
+            scrollToTopBtn.style.display = 'none';
+        }
+    }); // Added closing curly brace here
+});
