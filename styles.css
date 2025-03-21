@@ -1,49 +1,132 @@
 /* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 /* Dark Mode */
 body.dark-mode {
     background-color: #121212;
-    color: #f4f4f4;
+    color: #e0e0e0;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
 /* Navigation Bar */
+nav {
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
     justify-content: center;
-    padding: 20px 0;
-}
-
-nav ul li {
-    display: inline-block;
+    gap: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     font-size: 18px;
-    color: inherit;
+    color: #333;
     padding: 5px 10px;
     transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    border-bottom: 2px solid #007bff; /* Blue highlight effect */
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Header Section */
+h1 {
+    font-size: 2.5rem;
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Get in Touch Button */
+.get-in-touch {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.get-in-touch:hover {
+    background: #0056b3;
+}
+
+/* Sections */
+section {
+    margin: 30px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+.dark-mode nav {
+    background: #1e1e1e;
+}
+
+.dark-mode section {
+    background: #1e1e1e;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:hover {
+    background: #0056b3;
+}
+
+.dark-mode .dark-mode-toggle {
+    background: #ffa500;
 }
 
 /* Project Cards */
 .project-card {
     background: #ffffff;
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -60,26 +143,4 @@ nav ul li a:hover {
 
 .dark-mode .project-card:hover {
     box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.2);
-}
-
-/* Dark Mode Toggle */
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-    background: #0056b3;
-}
-
-.dark-mode .dark-mode-toggle {
-    background: #ffa500;
 }
