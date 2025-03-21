@@ -1,5 +1,7 @@
 // Wait for the DOM to fully load
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("JS Loaded");
+
     // Ensure GSAP and ScrollTrigger are available
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
         console.error("GSAP or ScrollTrigger not loaded.");
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gsap.from(section, {
             scrollTrigger: {
                 trigger: section,
-                start: "top 80%",
+                start: "top 85%",
                 toggleActions: "play none none reverse"
             },
             opacity: 0,
@@ -23,9 +25,5 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // ✅ RSS Feed API temporarily disabled due to 500 Internal Server Error
-    // fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@yourusername")
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.error("Error fetching RSS feed:", error));
+    console.log("GSAP animations applied successfully.");
 });
