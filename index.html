@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saiyam Sakhuja | Quantum Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <h1 class="glow">Saiyam Sakhuja</h1>
+        <h2 class="sub-glow">Quantum Researcher & Machine Learning Enthusiast</h2>
+        <a href="#contact" class="cta-button">Connect</a>
+    </div>
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -19,72 +27,16 @@
         </ul>
     </nav>
     
-    <header>
-        <h1 id="name">Saiyam Sakhuja</h1>
-        <h2 id="tagline">Quantum Researcher & Machine Learning Enthusiast</h2>
-        <a href="#contact" class="cta-button">Get in Touch</a>
-    </header>
-    
     <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>Quantum Application Engineer | Researcher in Quantum Machine Learning & Neuroscience Applications</p>
     </section>
 
-    <section id="education" class="fade-in">
-        <h2>Education</h2>
-        <p><strong>Master’s in Quantum Computing</strong> - XYZ University (Year)</p>
-        <p><strong>Bachelor’s in Computer Science</strong> - ABC University (Year)</p>
-    </section>
-
-    <section id="experience" class="fade-in">
-        <h2>Experience</h2>
-        <p><strong>Quantum Application Engineer</strong> - Company Name (Year-Present)</p>
-        <p>Responsibilities include developing quantum machine learning models and optimizing hybrid quantum-classical architectures.</p>
-        <p><strong>Internship at Naxon Labs, Uruguay</strong> - Focused on Digital-Analog Quantum Computing (DAQC) for brain-wave data analysis.</p>
-        <p><strong>Internship at CDAC, India</strong> - Quantum Haar Wavelet Transform (QHWT) for EEG signal analysis.</p>
-    </section>
-
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
-        <p><strong>Weather Forecasting using QML</strong> - Exploring Quantum Neural Networks for regression-based weather predictions.</p>
-        <p><strong>Quantum Voting Protocol</strong> - Implemented on IBM quantum hardware, analyzing noise effects.</p>
-        <p><strong>Molecular Dynamics Simulation</strong> - Simulated particle interactions with Lennard-Jones potential.</p>
-    </section>
-
-    <section id="publications" class="fade-in">
-        <h2>Publications</h2>
-        <ul>
-            <li>Research Paper on Quantum Machine Learning for Weather Forecasting</li>
-            <li>Quantum Haar Wavelet Transform for EEG Data Analysis</li>
-        </ul>
-    </section>
-
-    <section id="contact" class="fade-in">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
-        <p>GitHub: <a href="#">Your GitHub Profile</a></p>
-    </section>
-    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            gsap.from("nav ul li", {opacity: 0, y: -20, duration: 1, stagger: 0.2});
-            gsap.from("#name", {opacity: 0, x: -50, duration: 1});
-            gsap.from("#tagline", {opacity: 0, x: 50, duration: 1, delay: 0.5});
-            gsap.from(".cta-button", {opacity: 0, scale: 0.5, duration: 1, delay: 1});
-            
-            gsap.utils.toArray(".fade-in").forEach(section => {
-                gsap.from(section, {
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top 80%",
-                        toggleActions: "play none none reverse"
-                    },
-                    opacity: 0,
-                    y: 50,
-                    duration: 1
-                });
-            });
+            gsap.from(".hero h1", {opacity: 0, scale: 0.8, duration: 1.5, ease: "power3.out"});
+            gsap.from(".hero h2", {opacity: 0, y: 30, duration: 1.5, delay: 0.5, ease: "power3.out"});
+            gsap.from(".cta-button", {opacity: 0, scale: 0.5, duration: 1.5, delay: 1, ease: "elastic.out(1, 0.5)"});
         });
     </script>
 </body>
