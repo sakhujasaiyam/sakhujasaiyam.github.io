@@ -5,75 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saiyam Sakhuja | Quantum Researcher</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1 id="name">Saiyam Sakhuja</h1>
+        <h2 id="tagline">Quantum Researcher & Machine Learning Enthusiast</h2>
+        <a href="#contact" class="cta-button">Get in Touch</a>
     </header>
     
-    <section id="hero">
-        <h1>Saiyam Sakhuja</h1>
-        <h2>Quantum Researcher & Machine Learning Enthusiast</h2>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </section>
-    
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>Quantum Application Engineer | Researcher in Quantum Machine Learning & Neuroscience Applications</p>
     </section>
     
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>M.Sc. Physics</strong>, NIT Tiruchirappalli (2021-2023) - CGPA: 8.85</p>
-        <p><strong>B.Sc. Physics (Hons.)</strong>, University of Delhi (2018-2021) - CGPA: 8.14</p>
-    </section>
-    
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>Centre for Development of Advanced Computing (CDAC), Noida</h3>
-            <p>Quantum Application Engineer (Sept. 2024 - Present)</p>
-            <ul>
-                <li>Developed quantum algorithms for weather forecasting using QNNs, QLSTMs, and QGRUs.</li>
-                <li>Explored quantum image representation techniques for feature extraction.</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Quantum-GRU for Time-Series Forecasting</strong> - Developed QGRUs and QLSTMs for weather forecasting.</li>
-            <li><strong>Water Potability with Quantum & AI</strong> - Hybrid Quantum+AI model for water potability prediction.</li>
-        </ul>
-    </section>
-    
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><a href="https://arxiv.org/abs/2406.19730">Quantum-Enhanced Secure Approval Voting Protocol</a></li>
-            <li><a href="https://doi.org/10.1109/COMSNETS63942.2025.10885744">Benchmarking Quantum Image Representations</a></li>
-        </ul>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:quantum.saiyam@gmail.com">quantum.saiyam@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/saiyam-sakhuja/">Saiyam Sakhuja</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Saiyam Sakhuja | Designed with Quantum Inspiration</p>
-    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            gsap.from("nav ul li", {opacity: 0, y: -20, duration: 1, stagger: 0.2});
+            gsap.from("#name", {opacity: 0, x: -50, duration: 1});
+            gsap.from("#tagline", {opacity: 0, x: 50, duration: 1, delay: 0.5});
+            gsap.from(".cta-button", {opacity: 0, scale: 0.5, duration: 1, delay: 1});
+            
+            gsap.utils.toArray(".fade-in").forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1
+                });
+            });
+        });
+    </script>
 </body>
 </html>
