@@ -1,0 +1,67 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;  /* Light gray background */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #e6f7ff;  /* Light blue header */
+    color: #333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#about {
+    padding: 20px 0;
+}
+
+#experience {
+    background: #fff;
+    padding: 20px 0;
+}
+
+#projects {
+    background: #f0f0f0;
+    padding: 20px 0;
+}
+
+#publications {
+    background: #fff;
+    padding: 20px 0;
+}
+
+#skills {
+    background: #e6f7ff;
+    padding: 20px 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 5px solid #b3d9ff;  /* Accent color */
+}
+
+.date {
+    font-style: italic;
+    color: #666;
+}
