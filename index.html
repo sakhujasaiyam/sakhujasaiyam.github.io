@@ -4,40 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saiyam Sakhuja | Quantum Researcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="hero">
-        <div class="overlay"></div>
-        <h1 class="glow">Saiyam Sakhuja</h1>
-        <h2 class="sub-glow">Quantum Researcher & Machine Learning Enthusiast</h2>
-        <a href="#contact" class="cta-button">Connect</a>
-    </div>
 
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#intro">About</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
-    <section id="about" class="fade-in">
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Saiyam Sakhuja</h1>
+        <p>Quantum Researcher | AI & Machine Learning Enthusiast</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="intro" class="fade-in">
         <h2>About Me</h2>
-        <p>Quantum Application Engineer | Researcher in Quantum Machine Learning & Neuroscience Applications</p>
+        <p>I am a Quantum Application Engineer with experience in quantum machine learning, neuroscience applications, and quantum computing.</p>
     </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            gsap.from(".hero h1", {opacity: 0, scale: 0.8, duration: 1.5, ease: "power3.out"});
-            gsap.from(".hero h2", {opacity: 0, y: 30, duration: 1.5, delay: 0.5, ease: "power3.out"});
-            gsap.from(".cta-button", {opacity: 0, scale: 0.5, duration: 1.5, delay: 1, ease: "elastic.out(1, 0.5)"});
-        });
-    </script>
+    <!-- Education Section -->
+    <section id="education" class="fade-in">
+        <h2>Education</h2>
+        <div class="edu-card">
+            <h3>M.Sc. Physics</h3>
+            <p>National Institute of Technology Tiruchirappalli | CGPA: 8.85 (2021-2023)</p>
+        </div>
+        <div class="edu-card">
+            <h3>B.Sc. (Hons.) Physics</h3>
+            <p>University of Delhi | CGPA: 8.14 (2018-2021)</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">Quantum-GRU & QLSTM for Weather Forecasting</div>
+            <div class="project-card">Quantum & AI for Water Potability Prediction</div>
+            <div class="project-card">Molecular Dynamics for Lennard-Jones Potential</div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="fade-in">
+        <h2>Publications</h2>
+        <div class="publication">
+            <h3>Benchmarking Quantum Image Representations</h3>
+            <p><a href="https://doi.org/10.1109/COMSNETS63942.2025.10885744">Read More</a></p>
+        </div>
+        <div class="publication">
+            <h3>Quantum-Enhanced Secure Approval Voting Protocol</h3>
+            <p><a href="https://arxiv.org/abs/2406.19730">Read More</a></p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="fade-in">
+        <h2>Latest Blog Posts</h2>
+        <p>Fetching latest Medium blogs...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:quantum.saiyam@gmail.com">quantum.saiyam@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/saiyam-sakhuja">saiyam-sakhuja</a></p>
+    </section>
+
 </body>
 </html>
