@@ -34,5 +34,5 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             scrollToTopBtn.style.display = 'none';
         }
-    }); // Added closing curly brace here
+    });
 });
