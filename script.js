@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollToTopBtn = document.createElement('button');
     const experienceSlider = document.querySelector('.experience-slider');
     const experienceItems = document.querySelectorAll('.experience-item');
+    const cardCount = experienceItems.length;
+    const slideDuration = 5000; // Time each slide stays (milliseconds)
 
     let currentIndex = 0;
     let slideInterval;
-    const slideDuration = 5000; // Time each slide stays (milliseconds)
+    let isHovering = false;
 
     // Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
@@ -44,20 +46,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Experience slider functions
     function slideTo(index) {
-        experienceSlider.style.transform = `translateX(${-index * 100}%)`;
+        experienceSlider.style.transition = isHovering ? 'none' : 'transform 0.5s ease-in-out';
+        experienceSlider.style.transform = `translateX(${-index * 100 / cardCount}%)`;
     }
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % experienceItems.length;
+        currentIndex = (currentIndex + 1) % cardCount;
         slideTo(currentIndex);
+        startSlideInterval(); // Restart the interval after a slide
     }
 
     function startSlideInterval() {
-        slideInterval = setInterval(nextSlide, slideDuration);
+        clearInterval(slideInterval); // Clear any existing interval
+        slideInterval = setTimeout(nextSlide, slideDuration);
     }
 
     function stopSlideInterval() {
-        clearInterval(slideInterval);
+        clearTimeout(slideInterval);
     }
 
     // Initialize slider and animation
@@ -66,16 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Hover effect
     experienceSlider.addEventListener('mouseenter', () => {
+        isHovering = true;
         stopSlideInterval();
-        experienceItems.forEach(item => {
-            item.style.transition = 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out';
-        });
     });
 
     experienceSlider.addEventListener('mouseleave', () => {
+        isHovering = false;
         startSlideInterval();
-        experienceItems.forEach(item => {
-            item.style.transition = 'transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out';
-        });
     });
 });
