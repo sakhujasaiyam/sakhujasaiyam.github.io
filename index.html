@@ -1,59 +1,91 @@
 <!DOCTYPE html>
-<html lang="en" light-mode="dark">
-
+<html lang="en">
 <head>
-    <title>Saiyam Sakhuja | Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Quantum Computing, Quantum Machine Learning, Quantum Algorithms, QML, Research" />
-    <meta name="description" content="Saiyam Sakhuja - Quantum Computing Researcher specializing in QML, DAQC, and Quantum Software Development." />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:site_name" content="Saiyam Sakhuja | Portfolio">
-    <meta property="og:title" content="Saiyam Sakhuja | Home">
-    <meta property="og:description" content="Saiyam Sakhuja - Quantum Computing Researcher specializing in QML, DAQC, and Quantum Software Development.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="application-name" content="Saiyam Sakhuja | Home" />
-    <meta name="apple-mobile-web-app-title" content="Saiyam Sakhuja | Home" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Saiyam Sakhuja | Quantum Researcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1 id="name">Saiyam Sakhuja</h1>
+        <h2 id="tagline">Quantum Researcher & Machine Learning Enthusiast</h2>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </header>
+    
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>Quantum Application Engineer | Researcher in Quantum Machine Learning & Neuroscience Applications</p>
+    </section>
 
-<body class="no-scroll-preload">
-    <div id="home">
-        <section class="center">
-            <div id="particles-js"></div>
-        </section>
-    </div>
-    <center>
-        <div class="text col-sm-6" style="margin-top: 140px;">
-            Hi <span class="wave"><img src="assets/images/Hand.gif" width="35px"></span>&nbsp;, I'm <span class="header">Saiyam Sakhuja</span>
-            <div class="center">
-                <div>
-                    <img src="assets/images/PHOTO.jpg" alt="" class="rounded-circle" height="200" width="200">
-                </div>
-                <br/>
-                <span style="display: inline;">I specialize in <span class="animated-text"
-                    data-words="Quantum Computing, Quantum Machine Learning, Digital-Analog Quantum Computing, Quantum Software Development"></span>
-                </span>
-                <div class="social-icons">
-                    <a class="socialicon linkedin" href="https://www.linkedin.com/in/saiyam-sakhuja/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a class="socialicon github" href="https://github.com/sakhujasaiyam" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a class="socialicon google-scholar" href="https://scholar.google.com/citations?user=pqbR9WoAAAAJ" target="_blank">
-                        <i class="ai ai-google-scholar"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </center>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <section id="education" class="fade-in">
+        <h2>Education</h2>
+        <p><strong>Master’s in Quantum Computing</strong> - XYZ University (Year)</p>
+        <p><strong>Bachelor’s in Computer Science</strong> - ABC University (Year)</p>
+    </section>
+
+    <section id="experience" class="fade-in">
+        <h2>Experience</h2>
+        <p><strong>Quantum Application Engineer</strong> - Company Name (Year-Present)</p>
+        <p>Responsibilities include developing quantum machine learning models and optimizing hybrid quantum-classical architectures.</p>
+        <p><strong>Internship at Naxon Labs, Uruguay</strong> - Focused on Digital-Analog Quantum Computing (DAQC) for brain-wave data analysis.</p>
+        <p><strong>Internship at CDAC, India</strong> - Quantum Haar Wavelet Transform (QHWT) for EEG signal analysis.</p>
+    </section>
+
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <p><strong>Weather Forecasting using QML</strong> - Exploring Quantum Neural Networks for regression-based weather predictions.</p>
+        <p><strong>Quantum Voting Protocol</strong> - Implemented on IBM quantum hardware, analyzing noise effects.</p>
+        <p><strong>Molecular Dynamics Simulation</strong> - Simulated particle interactions with Lennard-Jones potential.</p>
+    </section>
+
+    <section id="publications" class="fade-in">
+        <h2>Publications</h2>
+        <ul>
+            <li>Research Paper on Quantum Machine Learning for Weather Forecasting</li>
+            <li>Quantum Haar Wavelet Transform for EEG Data Analysis</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
+        <p>GitHub: <a href="#">Your GitHub Profile</a></p>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            gsap.from("nav ul li", {opacity: 0, y: -20, duration: 1, stagger: 0.2});
+            gsap.from("#name", {opacity: 0, x: -50, duration: 1});
+            gsap.from("#tagline", {opacity: 0, x: 50, duration: 1, delay: 0.5});
+            gsap.from(".cta-button", {opacity: 0, scale: 0.5, duration: 1, delay: 1});
+            
+            gsap.utils.toArray(".fade-in").forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
