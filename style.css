@@ -31,15 +31,9 @@ nav {
 
 nav .container {
     display: flex;
-    justify-content: space-between; /* Change to center the navigation links */
+    justify-content: center; /* Center the navigation links */
     align-items: center;
     padding: 15px 0;
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #007bff;
 }
 
 .nav-links {
@@ -49,7 +43,7 @@ nav .container {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin: 0 20px; /* Add margin to space the links */
 }
 
 .nav-links a {
