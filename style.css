@@ -31,7 +31,7 @@ nav {
 
 nav .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Change to center the navigation links */
     align-items: center;
     padding: 15px 0;
 }
@@ -45,6 +45,7 @@ nav .container {
 .nav-links {
     list-style: none;
     display: flex;
+    justify-content: center; /* Center the navigation links */
 }
 
 .nav-links li {
