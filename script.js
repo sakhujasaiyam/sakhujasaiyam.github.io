@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollToTopBtn = document.getElementById('scroll-to-top');
     const experienceSlider = document.querySelector('.experience-slider');
     const experienceItems = document.querySelectorAll('.experience-item');
+    const sliderPagination = document.querySelector('.slider-pagination'); // Select the pagination container
     const cardCount = experienceItems.length;
     const slideDuration = 5000; // Time each slide stays (milliseconds)
 
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function slideTo(index) {
         experienceSlider.style.transition = isHovering ? 'none' : 'transform 0.5s ease-in-out';
         experienceSlider.style.transform = `translateX(${-index * 100 / cardCount}%)`;
+        currentIndex = index;
         updatePagination();
     }
 
@@ -67,11 +69,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function createPagination() {
-        const sliderPagination = document.querySelector('.slider-pagination');
         for (let i = 0; i < cardCount; i++) {
             const dot = document.createElement('div');
             dot.classList.add('slider-dot');
-            dot.addEventListener('click', () => slideTo(i));
+            dot.addEventListener('click', () => {
+                slideTo(i);
+                startSlideInterval(); // Restart the interval on dot click
+            });
             sliderPagination.appendChild(dot);
         }
         updatePagination();
