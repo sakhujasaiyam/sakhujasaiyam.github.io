@@ -29,27 +29,27 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 
-    // Navigation scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            nav.style.transform = 'translateY(-100%)';
-        } else {
-            nav.style.transform = 'translateY(0)';
-        }
+    // Navigation scroll effect (REMOVED)
+    // window.addEventListener('scroll', () => {
+    //     if (window.scrollY > 100) {
+    //         nav.style.transform = 'translateY(-100%)';
+    //     } else {
+    //         nav.style.transform = 'translateY(0)';
+    //     }
 
-        // Show/hide scroll to top button
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
+    //     // Show/hide scroll to top button
+    //     if (window.scrollY > 300) {
+    //         scrollToTopBtn.style.display = 'block';
+    //     } else {
+    //         scrollToTopBtn.style.display = 'none';
+    //     }
+    // });
 
     // Experience slider functions
     function slideTo(index) {
-        currentIndex = index; // Update currentIndex immediately
+        currentIndex = index;
         experienceSlider.style.transition = isHovering ? 'none' : 'transform 0.5s ease-in-out';
-        experienceSlider.style.transform = `translateX(${-index * 100}%)`; // Calculate transform based on index
+        experienceSlider.style.transform = `translateX(${-index * 100}%)`;
         updatePagination();
     }
 
@@ -68,13 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function createPagination() {
-        sliderPagination.innerHTML = ''; // Clear existing dots (important for re-creation)
+        sliderPagination.innerHTML = '';
         for (let i = 0; i < cardCount; i++) {
             const dot = document.createElement('div');
             dot.classList.add('slider-dot');
             dot.addEventListener('click', () => {
-                slideTo(i); // Slide directly to the clicked index
-                startSlideInterval(); // Restart interval on dot click
+                slideTo(i);
+                startSlideInterval();
             });
             sliderPagination.appendChild(dot);
         }
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Initialize slider and animation
-    createPagination(); // Create pagination first
-    slideTo(currentIndex); // Then slide to the initial slide
+    createPagination();
+    slideTo(currentIndex);
     startSlideInterval();
 
     // Hover effect
