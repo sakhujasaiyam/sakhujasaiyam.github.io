@@ -236,7 +236,9 @@ nav .container {
 
 /* Pagination Dots */
 .slider-pagination {
-    display: inline-block;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the dots horizontally */
+    align-items: center; /* Center the dots vertically (if needed) */
 }
 
 .slider-dot {
