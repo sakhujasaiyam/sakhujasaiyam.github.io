@@ -22,7 +22,7 @@ body {
 /* Navigation */
 nav {
     background-color: #fff;
-    position: fixed;
+    position: fixed; /* Make the navbar fixed */
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@ nav {
 
 nav .container {
     display: flex;
-    justify-content: center; /* Center the navigation links */
+    justify-content: center;
     align-items: center;
     padding: 15px 0;
 }
@@ -39,11 +39,11 @@ nav .container {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the navigation links */
+    justify-content: center;
 }
 
 .nav-links li {
-    margin: 0 20px; /* Add margin to space the links */
+    margin: 0 20px;
 }
 
 .nav-links a {
