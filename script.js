@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollToTopBtn = document.getElementById('scroll-to-top');
     const experienceSlider = document.querySelector('.experience-slider');
     const experienceItems = document.querySelectorAll('.experience-item');
-    const sliderPagination = document.querySelector('.slider-pagination'); // Select the pagination container
+    const sliderPagination = document.querySelector('.slider-pagination');
     const cardCount = experienceItems.length;
-    const slideDuration = 5000; // Time each slide stays (milliseconds)
+    const slideDuration = 5000;
 
     let currentIndex = 0;
     let slideInterval;
@@ -47,34 +47,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Experience slider functions
     function slideTo(index) {
+        currentIndex = index; // Update currentIndex immediately
         experienceSlider.style.transition = isHovering ? 'none' : 'transform 0.5s ease-in-out';
-        experienceSlider.style.transform = `translateX(${-index * 100 / cardCount}%)`;
-        currentIndex = index;
+        experienceSlider.style.transform = `translateX(${-index * 100}%)`; // Calculate transform based on index
         updatePagination();
     }
 
     function nextSlide() {
         currentIndex = (currentIndex + 1) % cardCount;
         slideTo(currentIndex);
-        startSlideInterval();
     }
 
     function startSlideInterval() {
         clearInterval(slideInterval);
-        slideInterval = setTimeout(nextSlide, slideDuration);
+        slideInterval = setInterval(nextSlide, slideDuration);
     }
 
     function stopSlideInterval() {
-        clearTimeout(slideInterval);
+        clearInterval(slideInterval);
     }
 
     function createPagination() {
+        sliderPagination.innerHTML = ''; // Clear existing dots (important for re-creation)
         for (let i = 0; i < cardCount; i++) {
             const dot = document.createElement('div');
             dot.classList.add('slider-dot');
             dot.addEventListener('click', () => {
-                slideTo(i);
-                startSlideInterval(); // Restart the interval on dot click
+                slideTo(i); // Slide directly to the clicked index
+                startSlideInterval(); // Restart interval on dot click
             });
             sliderPagination.appendChild(dot);
         }
@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Initialize slider and animation
-    slideTo(currentIndex);
+    createPagination(); // Create pagination first
+    slideTo(currentIndex); // Then slide to the initial slide
     startSlideInterval();
-    createPagination();
 
     // Hover effect
     experienceSlider.addEventListener('mouseenter', () => {
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollToTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // For smooth scrolling
+            behavior: 'smooth'
         });
     });
 
@@ -116,9 +116,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault();
 
-            // Basic form validation (you can add more robust validation)
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
@@ -128,12 +127,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // You would typically send this data to a server using fetch or AJAX
-            // For this example, we'll just log it to the console
-            console.log('Form Data:', { name: name, email: email, message: message });
+            console.log('Form Data:', {
+                name: name,
+                email: email,
+                message: message
+            });
             alert('Message sent successfully! (This is a simulation)');
 
-            // Clear the form
             contactForm.reset();
         });
     }
