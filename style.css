@@ -89,8 +89,8 @@ nav .container {
 
 #hero {
     background-image: url('images/hero_section_bg.png'); /* Replace with your image file */
-    background-size: cover;
-    background-position: left; /* Keep image on the left */
+    background-size: contain; /* Adjust image size to contain */
+    background-position: left center; /* Center image vertically */
     background-repeat: no-repeat;
     color: #e0e0e0;
     height: 100vh;
@@ -106,19 +106,19 @@ nav .container {
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3.5em; /* Increase heading size */
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .hero-subtitle {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Increase paragraph size */
     color: #bdbdbd;
     margin-bottom: 30px;
 }
 
 .social-links a {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Increase social icon size */
     margin: 0 10px;
     color: #bdbdbd;
     transition: color 0.3s ease-in-out;
@@ -135,6 +135,7 @@ nav .container {
 }
 
 .scroll-down p {
+    font-size: 1.1em; /* Increase scroll down text size */
     margin-bottom: 10px;
 }
 
