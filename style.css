@@ -95,9 +95,9 @@ nav .container {
     color: #e0e0e0;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: flex-end; /* Align items to the right */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Remove for now */
     position: relative;
 }
 
@@ -112,28 +112,33 @@ nav .container {
     z-index: -1;
 }
 
-.hero-content {
+.hero-content-container { /* New container */
     width: 50%;
-    padding: 20px;
     text-align: left;
-    margin-bottom: 20px; /* Add space between text and scroll down */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.hero-content {
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 4em; /* Increase heading size */
+    font-size: 4em;
     font-weight: 700;
-    margin-bottom: 15px; /* Increase space below heading */
+    margin-bottom: 15px;
 }
 
 .hero-subtitle {
-    font-size: 1.4em; /* Increase subtitle size */
+    font-size: 1.4em;
     color: #bdbdbd;
-    margin-bottom: 35px; /* Increase space below subtitle */
+    margin-bottom: 35px;
 }
 
 .social-links a {
-    font-size: 2em; /* Increase social icon size */
-    margin: 0 15px 0 0; /* Add right margin to separate icons */
+    font-size: 2em;
+    margin: 0 15px 0 0;
     color: #bdbdbd;
     transition: color 0.3s ease-in-out;
 }
@@ -143,17 +148,17 @@ nav .container {
 }
 
 .scroll-down {
-    text-align: right; /* Align scroll down to the right */
     color: #bdbdbd;
+    text-align: left; /* Align scroll down to the left */
 }
 
 .scroll-down p {
-    font-size: 1.2em; /* Increase scroll down text size */
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
 .scroll-down i {
-    font-size: 1.8em; /* Increase scroll down icon size */
+    font-size: 1.8em;
     animation: bounce 2s infinite;
 }
 
