@@ -89,36 +89,36 @@ nav .container {
 
 #hero {
     background-image: url('images/hero_section_bg.png'); /* Replace with your image file */
-    background-size: contain; /* Adjust image size to contain */
+    background-size: auto 100%; /* Adjust image size to fit height, auto width */
     background-position: left center; /* Center image vertically */
     background-repeat: no-repeat;
     color: #e0e0e0;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide into two columns */
+    display: flex; /* Using flexbox for better control */
+    justify-content: flex-end; /* Align content to the right */
     align-items: center; /* Vertically center content */
 }
 
 .hero-content {
-    grid-column: 2; /* Place text in the second column */
+    width: 50%; /* Adjust width as needed */
     padding: 20px; /* Add some padding */
     text-align: left; /* Align text to the left */
 }
 
 .hero h1 {
-    font-size: 3.5em; /* Increase heading size */
+    font-size: 3.5em;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .hero-subtitle {
-    font-size: 1.2em; /* Increase paragraph size */
+    font-size: 1.2em;
     color: #bdbdbd;
     margin-bottom: 30px;
 }
 
 .social-links a {
-    font-size: 1.8em; /* Increase social icon size */
+    font-size: 1.8em;
     margin: 0 10px;
     color: #bdbdbd;
     transition: color 0.3s ease-in-out;
@@ -135,7 +135,7 @@ nav .container {
 }
 
 .scroll-down p {
-    font-size: 1.1em; /* Increase scroll down text size */
+    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
