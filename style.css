@@ -95,9 +95,8 @@ nav .container {
     color: #e0e0e0;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* Change to flex-start */
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Vertically center content */
     position: relative;
 }
 
@@ -113,11 +112,10 @@ nav .container {
 }
 
 .hero-content {
-    width: 40%; /* Reduce width to move closer to image */
+    width: 35%; /* Adjust width to fit within the red square */
     padding: 20px;
     text-align: left;
-    margin-bottom: 20px;
-    margin-left: 30%; /* Add left margin to move right */
+    margin-right: 15%; /* Adjust right margin to fit within the red square */
 }
 
 .hero h1 {
