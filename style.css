@@ -97,7 +97,7 @@ nav .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end; /* Remove for now */
+    align-items: flex-end; /* Keep align-items: flex-end; */
     position: relative;
 }
 
@@ -112,16 +112,11 @@ nav .container {
     z-index: -1;
 }
 
-.hero-content-container { /* New container */
-    width: 50%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-}
-
 .hero-content {
+    width: 50%;
     padding: 20px;
+    text-align: left;
+    margin-bottom: 20px; /* Add space between text and scroll down */
 }
 
 .hero h1 {
