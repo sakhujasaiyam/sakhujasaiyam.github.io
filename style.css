@@ -132,7 +132,7 @@ nav .container {
 }
 
 .social-links a {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 15px 0 0;
     color: #bdbdbd;
     transition: color 0.3s ease-in-out;
@@ -148,8 +148,9 @@ nav .container {
 }
 
 .scroll-down p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .scroll-down i {
