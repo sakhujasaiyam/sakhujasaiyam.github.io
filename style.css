@@ -97,7 +97,7 @@ nav .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end; /* Keep align-items: flex-end; */
+    align-items: flex-start; /* Change to flex-start */
     position: relative;
 }
 
@@ -113,10 +113,11 @@ nav .container {
 }
 
 .hero-content {
-    width: 50%;
+    width: 40%; /* Reduce width to move closer to image */
     padding: 20px;
     text-align: left;
-    margin-bottom: 20px; /* Add space between text and scroll down */
+    margin-bottom: 20px;
+    margin-left: 30%; /* Add left margin to move right */
 }
 
 .hero h1 {
@@ -144,7 +145,7 @@ nav .container {
 
 .scroll-down {
     color: #bdbdbd;
-    text-align: left; /* Align scroll down to the left */
+    text-align: left;
 }
 
 .scroll-down p {
