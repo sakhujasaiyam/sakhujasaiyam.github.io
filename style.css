@@ -72,8 +72,8 @@ nav .container {
 }
 
 /* Hero Section */
-#hero {
-    background: none; /* Removed existing gradient */
+/* #hero {
+    background: none; 
     color: #e0e0e0;
     height: 100vh;
     display: flex;
@@ -85,6 +85,24 @@ nav .container {
 
 .hero-content {
     max-width: 800px;
+} */
+
+#hero {
+    background-image: url('your-bloch-sphere-image.jpg'); /* Replace with your image file */
+    background-size: cover;
+    background-position: left; /* Keep image on the left */
+    background-repeat: no-repeat;
+    color: #e0e0e0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide into two columns */
+    align-items: center; /* Vertically center content */
+}
+
+.hero-content {
+    grid-column: 2; /* Place text in the second column */
+    padding: 20px; /* Add some padding */
+    text-align: left; /* Align text to the left */
 }
 
 .hero h1 {
