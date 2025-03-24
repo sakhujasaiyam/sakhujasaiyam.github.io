@@ -115,7 +115,7 @@ nav .container {
     width: 35%; /* Adjust width as needed */
     padding: 20px;
     text-align: left;
-    margin-left: 20%; /* Adjust left margin to move to center-right */
+    margin-left: 25%; /* Increase left margin to add space */
 }
 
 .hero h1 {
