@@ -113,7 +113,7 @@ nav .container {
 }
 
 .hero-content {
-    width: 40%; /* Reduce width to move closer to image */
+    width: 80%; /* Reduce width to move closer to image */
     padding: 20px;
     text-align: left;
     margin-bottom: 20px;
