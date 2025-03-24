@@ -88,19 +88,19 @@ nav .container {
 } */
 
 #hero {
-    background-image: url('images/hero_section_bg.png'); /* Replace with your image file */
-    background-size: auto 100%; /* Adjust image size to fit height, auto width */
-    background-position: center center; /* Center image horizontally and vertically */
+    background-image: url('images/hero_section_bg.png');
+    background-size: auto 100%;
+    background-position: center center;
     background-repeat: no-repeat;
     color: #e0e0e0;
     height: 100vh;
     display: flex;
-    justify-content: flex-end; /* Align content to the right */
-    align-items: center; /* Vertically center content */
-    position: relative; /* Needed for pseudo-element */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: flex-end; /* Align items to the right */
+    position: relative;
 }
 
-/* Dark background behind the image */
 #hero::before {
     content: "";
     position: absolute;
@@ -108,31 +108,32 @@ nav .container {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #121220; /* Dark background color */
-    z-index: -1; /* Place behind the image */
+    background-color: #121220;
+    z-index: -1;
 }
 
 .hero-content {
-    width: 50%; /* Adjust width as needed */
-    padding: 20px; /* Add some padding */
-    text-align: left; /* Align text to the left */
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 20px; /* Add space between text and scroll down */
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 4em; /* Increase heading size */
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increase space below heading */
 }
 
 .hero-subtitle {
-    font-size: 1.2em;
+    font-size: 1.4em; /* Increase subtitle size */
     color: #bdbdbd;
-    margin-bottom: 30px;
+    margin-bottom: 35px; /* Increase space below subtitle */
 }
 
 .social-links a {
-    font-size: 1.8em;
-    margin: 0 10px;
+    font-size: 2em; /* Increase social icon size */
+    margin: 0 15px 0 0; /* Add right margin to separate icons */
     color: #bdbdbd;
     transition: color 0.3s ease-in-out;
 }
@@ -142,18 +143,17 @@ nav .container {
 }
 
 .scroll-down {
-    text-align: center;
-    margin-top: 30px;
+    text-align: right; /* Align scroll down to the right */
     color: #bdbdbd;
 }
 
 .scroll-down p {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Increase scroll down text size */
     margin-bottom: 10px;
 }
 
 .scroll-down i {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Increase scroll down icon size */
     animation: bounce 2s infinite;
 }
 
