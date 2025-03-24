@@ -88,7 +88,7 @@ nav .container {
 } */
 
 #hero {
-    background-image: url('your-bloch-sphere-image.jpg'); /* Replace with your image file */
+    background-image: url('images/hero_section_bg.png'); /* Replace with your image file */
     background-size: cover;
     background-position: left; /* Keep image on the left */
     background-repeat: no-repeat;
