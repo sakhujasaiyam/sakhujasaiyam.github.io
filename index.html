@@ -1,90 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Saiyam Sakhuja | Quantum Computing Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha510-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">My Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <!-- Hero Section -->
-    <header id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Your Name</span></h1>
-            <p>A passionate developer creating amazing web experiences.</p>
-            <a href="#projects" class="btn">View My Work</a>
+<!--         <div id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Saiyam Sakhuja | Quantum Computing Engineer</h1>
+                <h1>Hi, I'm Saiyam Sakhuja!</h1>
+                <p class="hero-subtitle">
+                    A quantum computing learner and practitioner.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/saiyam-sakhuja/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://scholar.google.com/citations?hl=en&pli=1&user=R3L9sVoAAAAJ" target="_blank"><i class="fab fa-google"></i></a>
+                    <a href="https://github.com/sakhujasaiyam" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="scroll-down">
+                    <p>Scroll Down to know more</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a web developer specializing in front-end and back-end development...</p>
+-->
+<!--     <section id="hero">
+        <div class="hero-content-container">
+            <div class="hero-content">
+                <h1>Hi, I'm Saiyam Sakhuja!</h1>
+                <p>A quantum computing learner and practitioner.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <p>Scroll Down to Know More</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section> -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Saiyam Sakhuja!</h1>
+            <p>A quantum computing learner and practitioner.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="scroll-down">
+                <p>Scroll Down to Know More</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
+    
+    </header>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2>Skills</h2>
             <div class="skills-container">
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">React</div>
-                <div class="skill">Node.js</div>
+                <div class="skill-category">
+                    <h3>Quantum Computing Libraries</h3>
+                    <ul>
+                        <li>Qiskit</li>
+                        <li>Pennylane</li>
+                        <li>Cirq</li>
+                        <li>PyTorch</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>LaTeX</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-slider-wrapper">
+                <div class="experience-slider">
+                    <div class="experience-item">
+                        <div class="experience-content">
+                            <h3>Quantum Application Engineer</h3>
+                            <p class="date">Sept. 2024 - Present</p>
+                            <p class="company">Centre for Development of Advanced Computing, Noida, India</p>
+                            <ul>
+                                <li>
+                                    Developed quantum algorithms for weather forecasting using QNNs, QLSTMs, and QGRUs to
+                                    analyze climate patterns. [cite: 82, 83]
+                                </li>
+                                <li>
+                                    Explored quantum techniques for image representation to enhance feature extraction and
+                                    efficiency which lead to paper presentation at COMSNETS 2025. [cite: 83]
+                                </li>
+                                <li>
+                                    Developed unitary and statevector simulator contributing to a Python toolkit for FPGA-based
+                                    acceleration, integrating quantum and high-performance computing. [cite: 83]
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-content">
+                            <h3>Research Intern</h3>
+                            <p class="date">May 2024 - Aug. 2024</p>
+                            <p class="company">Naxon Labs, Uruguay</p>
+                            <ul>
+                                <li>
+                                    Researched Digital-Analog Quantum Computing (DAQC) for Quantum Fourier Transform on
+                                    brain-wave data. [cite: 84, 85, 86]
+                                </li>
+                                <li>
+                                    Converted conventional quantum circuits into DAQC circuits to reduce circuit depth. [cite: 85, 86]
+                                </li>
+                                <li>
+                                    Applied DAQC techniques to neuroscientific data analysis, expanding quantum applications
+                                    in brain research. [cite: 86]
+                                </li>
+                                <li>
+                                    Collaborated with a multi-disciplinary international team, contributing to research
+                                    discussions and development efforts. [cite: 87]
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-content">
+                            <h3>Project Associate</h3>
+                            <p class="date">March 2024 - Aug. 2024</p>
+                            <p class="company">Centre for Development of Advanced Computing, Delhi, India</p>
+                            <ul>
+                                <li>
+                                    Focused on Quantum Machine Learning (QML) for EEG data analysis, including recording,
+                                    preprocessing, and encoding EEG data into quantum states. [cite: 88, 89, 90]
+                                </li>
+                                <li>
+                                    Applied Quantum Fourier Transform (QFT) and Quantum Haar Wavelet Transform (QHWT) to
+                                    analyze the frequency spectrum of EEG signals. [cite: 89, 90]
+                                </li>
+                                <li>
+                                    Developed quantum models to classify focused versus unfocused cognitive states,
+                                    uncovering insights into brain activity patterns, achieving accuracy of 80% comparable to
+                                    classical models. [cite: 90]
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-content">
+                            <h3>Junior Quantum Data Analyst</h3>
+                            <p class="date">2023 - 2024</p>
+                            <p class="company">The Quantum Insider (TQI), Canada</p>
+                            <ul>
+                                <li>
+                                    Managed a global database of news and research related to different quantum entities. [cite: 91, 92]
+                                </li>
+                                <li>
+                                    Developed backend code to enable user-friendly data exploration. [cite: 92]
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <div class="slider-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project One</h3>
-                    <p>Short description of the project.</p>
+                <div class="project-item">
+                    <a href="#">
+                        <img src="project1.jpg" alt="Project 1">
+                        <h3>Implementation of Quantum-GRU, Quantum-LSTM and QNNs for time-series forecasting</h3>
+                        <p class="date">Dec. 2023 - Feb. 2025</p>
+                        <p>Developed Quantum Gated Recurrent Units (QGRU) and Quantum Long Short-Term Memory (QLSTM)
+                            models for weather time series analysis using PyTorch, Qiskit and Pennylane. [cite: 93, 94, 95]
+                        </p>
+                    </a>
                 </div>
-                <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project Two</h3>
-                    <p>Short description of the project.</p>
+                <div class="project-item">
+                    <a href="#">
+                        <img src="project2.jpg" alt="Project 2">
+                        <h3>Improving Water Potability with Quantum and AI techniques</h3>
+                        <p class="date">June 2024 - Aug. 2024</p>
+                        <p>Developed a hybrid Quantum+AI model for water potability prediction, utilizing LightGBM, XGBoost,
+                            and Bagging Classifier for classical machine learning and Quantum PCA, QNNs, and QSVMs for
+                            quantum enhancements. [cite: 96, 97, 98, 99]
+                        </p>
+                    </a>
+                </div>
+                <div class="project-item">
+                    <a href="#">
+                        <img src="project3.jpg" alt="Project 3">
+                        <h3>Molecular Dynamics for Lennard-Jones Potential</h3>
+                        <p class="date">Jan. 2022 - April 2022</p>
+                        <p>Particles were arranged on a 2-D rectangular lattice and were in motion while interacting
+                            (attraction and repulsion) via Lennard-Jones Potential. [cite: 100, 101]
+                        </p>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <section id="publications">
         <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name">
-                <input type="email" id="email" placeholder="Your Email">
-                <textarea id="message" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <h2>Publications</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <h3>Benchmarking Quantum Image Representations Algorithms for Hybrid-Quantum applications</h3>
+                    <p class="co-author">Co-author: Abhishek Tiwari, Scientist E, CDAC Noida</p>
+                    <p class="abstract">
+                        This paper benchmarks various quantum image representation algorithms for hybrid-quantum
+                        applications.
+                    </p>
+                    <a
+                        href="https://www.researchgate.net/publication/378627888_Benchmarking_Quantum_Image_Representations_Algorithms_for_Hybrid-Quantum_applications"
+                        target="_blank">View Publication</a>
+                </div>
+                <div class="publication-item">
+                    <h3>Quantum-Enhanced Secure Approval Voting Protocol</h3>
+                    <p class="co-author">Co-author: Dr. Balakrishnan S., Associate Professor, VIT Vellore, Tamil Nadu, India
+                    </p>
+                    <p class="abstract">
+                        </p>
+                    <a href="https://www.researchgate.net/publication/375784536_Quantum-Enhanced_Secure_Approval_Voting_Protocol"
+                        target="_blank">View Publication</a>
+                </div>
+                <div class="publication-item">
+                    <h3>Lead-free Sb-modified potassium sodium niobate ceramics for enhanced energy harvesting and superior
+                        performance in piezoelectric transducers for ultrasonic inspection</h3>
+                    <p class="co-author">Co-author: Dr. Annapureddy V., Associate Professor, NIT Tiruchirappalli, Tamil
+                        Nadu, India</p>
+                    <p class="abstract">
+                        </p>
+                    <a
+                        href="https://www.researchgate.net/publication/375084516_Lead-free_Sb-modified_potassium_sodium_niobate_ceramics_for_enhanced_energy_harvesting_and_superior_performance_in_piezoelectric_transducers_for_ultrasonic_inspection"
+                        target="_blank">View Publication</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Scroll to Top -->
-    <button id="scroll-to-top">↑</button>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                A highly motivated and skilled Quantum Application Engineer with a strong background in physics and a
+                passion for developing cutting-edge quantum solutions. Proven ability to apply quantum machine learning
+                techniques to solve complex problems, as demonstrated through research and projects in climate pattern
+                analysis, EEG data analysis, and water potability prediction.
+            </p>
+        </div>
+    </section>
 
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p style="text-align: center;">You can reach me at <a href="mailto:quantum.saiyam@gmail.com">quantum.saiyam@gmail.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Saiyam Sakhuja</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
+    <button id="scroll-to-top" title="Go to top">↑</button>
+
 </body>
+
 </html>
