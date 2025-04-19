@@ -88,36 +88,29 @@ nav .container {
 } */
 
 #hero {
-    background-image: url('images/bloch_sphere_stick_man.drawio.svg');
-    background-size: contain; /* Try this first */
-    background-position: center center;
-    /* background-position: left left; */
-    background-repeat: no-repeat;
     color: #e0e0e0;
     height: 100vh;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Vertically center content */
     position: relative;
+    overflow: hidden; /* To contain the SVG */
 }
 
-#hero::before {
-    content: "";
+.hero-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #121220;
-    z-index: -1;
+    z-index: -1; /* Place behind the text */
 }
 
 .hero-content {
     width: 35%; /* Adjust width as needed */
     padding: 20px;
     text-align: left;
-    margin-left: 40%; /* Increase left margin to add space */
-    /* margin-bottom: 30px; */
+    margin-left: 40%; /* Adjust left margin to add space */
 }
 
 .hero h1 {
@@ -150,7 +143,6 @@ nav .container {
 
 .scroll-down p {
     font-size: 1em;
-    margin-bottom: 20px;
     margin-bottom: 10px;
 }
 
