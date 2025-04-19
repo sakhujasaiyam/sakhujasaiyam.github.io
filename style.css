@@ -89,9 +89,9 @@ nav .container {
 
 #hero {
     background-image: url('images/bloch_sphere_stick_man.drawio.svg');
-    background-size: auto 100%;
+    background-size: contain; /* Try this first */
     background-position: center center;
-/*     background-position: left left; */
+    /* background-position: left left; */
     background-repeat: no-repeat;
     color: #e0e0e0;
     height: 100vh;
@@ -117,7 +117,7 @@ nav .container {
     padding: 20px;
     text-align: left;
     margin-left: 40%; /* Increase left margin to add space */
-/*     margin-bottom: 30px; */
+    /* margin-bottom: 30px; */
 }
 
 .hero h1 {
