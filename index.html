@@ -82,16 +82,21 @@
             color: var(--text-primary);
         }
 
-        nav ul {
+        /* Desktop Navigation */
+        nav.desktop-nav {
+            display: block;
+        }
+
+        nav.desktop-nav ul {
             display: flex;
             list-style: none;
         }
 
-        nav ul li {
+        nav.desktop-nav ul li {
             margin-left: 32px;
         }
 
-        nav ul li a {
+        nav.desktop-nav ul li a {
             color: var(--text-primary);
             text-decoration: none;
             font-size: 14px;
@@ -100,11 +105,11 @@
             transition: var(--transition);
         }
 
-        nav ul li a:hover {
+        nav.desktop-nav ul li a:hover {
             color: var(--accent-color);
         }
 
-        nav ul li a::before {
+        nav.desktop-nav ul li a::before {
             content: "0" counter(item) ".";
             counter-increment: item;
             margin-right: 5px;
@@ -112,7 +117,7 @@
             font-size: 14px;
         }
 
-        /* Mobile Navigation */
+        /* Mobile Navigation Toggle */
         .mobile-nav-toggle {
             display: none;
             background: transparent;
@@ -120,6 +125,59 @@
             color: var(--text-primary);
             font-size: 24px;
             cursor: pointer;
+            z-index: 101;
+        }
+
+        /* Mobile Navigation Menu */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 75%;
+            height: 100vh;
+            background-color: var(--secondary-color);
+            padding: 80px 20px;
+            transform: translateX(100%);
+            transition: var(--transition);
+            z-index: 99;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+        }
+
+        .mobile-nav ul li {
+            margin: 20px 0;
+        }
+
+        .mobile-nav ul li a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 16px;
+            font-family: var(--font-mono);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .mobile-nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-nav ul li a::before {
+            content: "0" counter(item) ".";
+            counter-increment: item;
+            margin-right: 5px;
+            color: var(--accent-color);
+            font-size: 16px;
         }
 
         /* Sections */
@@ -687,7 +745,8 @@
                 left: 0;
             }
 
-            nav ul {
+            /* Hide desktop nav and show mobile nav toggle on small screens */
+            nav.desktop-nav {
                 display: none;
             }
 
@@ -695,37 +754,9 @@
                 display: block;
             }
 
+            /* Display mobile nav when active */
             .mobile-nav {
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                width: 75%;
-                height: 100vh;
-                background-color: var(--secondary-color);
-                padding: 80px 20px;
-                transform: translateX(100%);
-                transition: var(--transition);
-                z-index: 99;
-            }
-
-            .mobile-nav.active {
-                transform: translateX(0);
-            }
-
-            .mobile-nav ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                list-style: none;
-            }
-
-            .mobile-nav ul li {
-                margin: 20px 0;
-            }
-
-            .mobile-nav ul li a {
-                font-size: 16px;
+                display: block;
             }
         }
 
@@ -748,6 +779,33 @@
         body {
             counter-reset: section item;
         }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -758,7 +816,7 @@
     <header>
         <div class="container header-container">
             <a href="#hero" class="logo">|Ψ⟩<span>_</span></a>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
