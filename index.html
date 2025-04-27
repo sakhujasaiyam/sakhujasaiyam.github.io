@@ -345,10 +345,15 @@
             transition: var(--transition);
         }
 
-        .profile-pic img {
+/*         .profile-pic img {
             border-radius: 4px;
             mix-blend-mode: multiply;
             filter: grayscale(100%) contrast(1);
+            width: 100%;
+            height: auto;
+        } */
+        .profile-pic svg {
+            border-radius: 4px;
             width: 100%;
             height: auto;
         }
@@ -897,7 +902,23 @@
                     </ul>
                 </div>
                 <div class="profile-pic">
-                    <img src="https://via.placeholder.com/400x600/071330/05edcb?text=Quantum+Computing" alt="Quantum Computing Visualization">
+<!--                     <img src="https://via.placeholder.com/400x600/071330/05edcb?text=Quantum+Computing" alt="Quantum Computing Visualization"> -->
+                    <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#05edcb" />
+                            <stop offset="100%" stop-color="#0466c8" />
+                          </linearGradient>
+                        </defs>
+                        <rect x="50" y="50" width="300" height="500" rx="10" fill="url(#quantumGradient)" opacity="0.7" />
+                        <circle cx="200" cy="200" r="80" fill="none" stroke="#05edcb" stroke-width="2" />
+                        <circle cx="200" cy="200" r="40" fill="none" stroke="#05edcb" stroke-width="2" />
+                        <line x1="120" y1="200" x2="280" y2="200" stroke="#fff" stroke-width="1" />
+                        <line x1="200" y1="120" x2="200" y2="280" stroke="#fff" stroke-width="1" />
+                        <circle cx="200" cy="350" r="60" fill="none" stroke="#05edcb" stroke-width="2" />
+                        <path d="M150,400 Q200,450 250,400" fill="none" stroke="#fff" stroke-width="2" />
+                        <path d="M150,420 Q200,470 250,420" fill="none" stroke="#fff" stroke-width="2" />
+                      </svg>
                 </div>
             </div>
         </div>
