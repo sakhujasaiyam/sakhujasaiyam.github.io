@@ -327,8 +327,9 @@
             position: relative;
             max-width: 300px;
             border-radius: 4px;
-            background-color: var(--accent-color);
+/*             background-color: var(--accent-color); */
             margin-left: auto;
+            overflow: hidden;
         }
 
         .profile-pic::after {
@@ -347,10 +348,12 @@
 
         .profile-pic img {
             border-radius: 4px;
-            mix-blend-mode: multiply;
-            filter: grayscale(100%) contrast(1);
+/*             mix-blend-mode: multiply; */
+/*             filter: grayscale(100%) contrast(1); */
             width: 100%;
             height: auto;
+            display: block;
+            object-fit: cover;
         }
 /*         .profile-pic svg {
             border-radius: 4px;
