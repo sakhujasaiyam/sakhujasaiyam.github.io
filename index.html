@@ -902,47 +902,47 @@
                     </ul>
                 </div>
                 <div class="profile-pic">
-                  <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Main Bloch sphere -->
-                    <circle cx="250" cy="250" r="200" fill="none" stroke="#05edcb" stroke-width="3" />
-                    
-                    <!-- X axis -->
-                    <line x1="50" y1="250" x2="450" y2="250" stroke="#05edcb" stroke-width="2" />
-                    <text x="460" y="250" fill="#05edcb" font-family="monospace" font-size="24">x</text>
-                    
-                    <!-- Y axis -->
-                    <line x1="250" y1="50" x2="250" y2="450" stroke="#05edcb" stroke-width="2" />
-                    <text x="250" y="480" fill="#05edcb" font-family="monospace" font-size="24">y</text>
-                    
-                    <!-- Z axis (perspective) -->
-                    <line x1="250" y1="250" x2="350" y2="150" stroke="#05edcb" stroke-width="2" />
-                    <text x="360" y="140" fill="#05edcb" font-family="monospace" font-size="24">z</text>
-                    
-                    <!-- |0⟩ state label -->
-                    <text x="240" y="40" fill="#05edcb" font-family="monospace" font-size="24">|0⟩</text>
-                    
-                    <!-- |1⟩ state label -->
-                    <text x="240" y="470" fill="#05edcb" font-family="monospace" font-size="24">|1⟩</text>
-                    
-                    <!-- Quantum state vector from center to point -->
-                    <line x1="250" y1="250" x2="370" y2="180" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
-                    
-                    <!-- State vector arc marker -->
-                    <path d="M 250,250 L 370,250 A 120,120 0 0,0 370,180" fill="none" stroke="#ffffff" stroke-width="1.5" />
-                    
-                    <!-- |ψ⟩ state -->
-                    <circle cx="370" cy="180" r="10" fill="#05edcb" />
-                    <text x="390" y="170" fill="#05edcb" font-family="monospace" font-size="24">|ψ⟩</text>
-                    
-                    <!-- Stick figure at the quantum state -->
-                    <circle cx="370" cy="180" r="15" fill="none" stroke="#ffffff" stroke-width="2" /> <!-- Head -->
-                    <line x1="370" y1="195" x2="370" y2="225" stroke="#ffffff" stroke-width="2" /> <!-- Body -->
-                    <line x1="370" y1="205" x2="350" y2="215" stroke="#ffffff" stroke-width="2" /> <!-- Left arm -->
-                    <line x1="370" y1="205" x2="390" y2="215" stroke="#ffffff" stroke-width="2" /> <!-- Right arm -->
-                    <line x1="370" y1="225" x2="355" y2="245" stroke="#ffffff" stroke-width="2" /> <!-- Left leg -->
-                    <line x1="370" y1="225" x2="385" y2="245" stroke="#ffffff" stroke-width="2" /> <!-- Right leg -->
-                  </svg>
-            </div>
+                      <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background rectangle for better visibility -->
+                        <rect x="0" y="0" width="500" height="500" fill="transparent" />
+                        
+                        <!-- Main Bloch sphere -->
+                        <circle cx="250" cy="250" r="200" fill="none" stroke="#05edcb" stroke-width="3" />
+                        
+                        <!-- Coordinate axes -->
+                        <!-- Z axis (vertical) -->
+                        <line x1="250" y1="50" x2="250" y2="450" stroke="#05edcb" stroke-width="2" />
+                        
+                        <!-- X axis (horizontal) -->
+                        <line x1="50" y1="250" x2="450" y2="250" stroke="#05edcb" stroke-width="2" />
+                        <text x="40" y="240" fill="#05edcb" font-family="monospace" font-size="20">x</text>
+                        
+                        <!-- Y axis (perspective) -->
+                        <line x1="250" y1="250" x2="400" y2="200" stroke="#05edcb" stroke-width="2" />
+                        <text x="410" y="200" fill="#05edcb" font-family="monospace" font-size="20">y</text>
+                        
+                        <!-- State labels -->
+                        <text x="240" y="40" fill="#05edcb" font-family="monospace" font-size="20">|0⟩</text>
+                        <text x="240" y="475" fill="#05edcb" font-family="monospace" font-size="20">|1⟩</text>
+                        
+                        <!-- Quantum state vector -->
+                        <line x1="250" y1="250" x2="350" y2="170" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+                        
+                        <!-- State vector arc -->
+                        <path d="M 250,250 L 350,250 A 100,100 0 0,0 350,170" fill="none" stroke="#ffffff" stroke-width="1.5" />
+                        
+                        <!-- Stick figure hanging from the state vector point -->
+                        <circle cx="350" cy="170" r="8" fill="#05edcb" />
+                        <line x1="350" y1="170" x2="350" y2="200" stroke="#ffffff" stroke-width="2" /> <!-- Body -->
+                        <line x1="350" y1="185" x2="335" y2="170" stroke="#ffffff" stroke-width="2" /> <!-- Left arm -->
+                        <line x1="350" y1="185" x2="365" y2="170" stroke="#ffffff" stroke-width="2" /> <!-- Right arm -->
+                        <line x1="350" y1="200" x2="340" y2="220" stroke="#ffffff" stroke-width="2" /> <!-- Left leg -->
+                        <line x1="350" y1="200" x2="360" y2="220" stroke="#ffffff" stroke-width="2" /> <!-- Right leg -->
+                        
+                        <!-- |ψ⟩ state label -->
+                        <text x="370" y="160" fill="#05edcb" font-family="monospace" font-size="20">|ψ⟩</text>
+                      </svg>
+                </div>
             </div>
         </div>
     </section>
