@@ -653,6 +653,52 @@
             margin-bottom: 5px;
         }
 
+        /* Blog Section */
+        .blog {
+          min-height: auto;
+          padding: 100px 0;
+        }
+        
+        .blog-description {
+          max-width: 600px;
+          margin-bottom: 40px;
+          color: var(--text-secondary);
+          font-size: 18px;
+        }
+        
+        .medium-widget-container {
+          width: 100%;
+          margin-top: 30px;
+        }
+        
+        /* Customize Medium widget to match your theme */
+        .medium-widget-article__title {
+          font-family: var(--font-sans) !important;
+          color: var(--text-primary) !important;
+        }
+        
+        .medium-widget-article__description {
+          font-family: var(--font-sans) !important;
+          color: var(--text-secondary) !important;
+        }
+        
+        .medium-widget-article__info {
+          font-family: var(--font-mono) !important;
+        }
+        
+        /* Add some hover effects to medium cards */
+        .medium-widget-article {
+          transition: var(--transition) !important;
+          background-color: var(--secondary-color) !important;
+          border-radius: 4px !important;
+          overflow: hidden !important;
+        }
+        
+        .medium-widget-article:hover {
+          transform: translateY(-5px) !important;
+          box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7) !important;
+        }
+
         /* Contact Section */
         .contact {
             text-align: center;
@@ -831,6 +877,7 @@
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blogs</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -848,6 +895,7 @@
             <li><a href="#publications">Publications</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blogs</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -1116,6 +1164,17 @@
         </div>
     </section>
 
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">My Blog</h2>
+            <div class="blog-description">
+                <p>Sharing my thoughts and insights on quantum computing, machine learning algorithms, and their applications in solving real-world problems.</p>
+            </div>
+            <div id="medium-widget" class="medium-widget-container"></div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -1446,6 +1505,23 @@
                 }
             </style>
         `);
+    </script>
+    
+    <!-- Medium Widget -->
+    <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+    <script>
+      MediumWidget.Init({
+        renderTo: '#medium-widget',
+        params: {
+          resource: "https://medium.com/@sakhujasaiyam", // Replace with your Medium username
+          postsPerLine: 3,
+          limit: 6,
+          picture: "big",
+          fields: ["description", "author", "claps", "publishAt"],
+          ratio: "square",
+          theme: "dark" // This will better match your dark theme
+        }
+      });
     </script>
 </body>
 </html>
