@@ -1510,17 +1510,26 @@
     <!-- Medium Widget -->
     <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
     <script>
-      MediumWidget.Init({
-        renderTo: '#medium-widget',
-        params: {
-          resource: "@sakhujasaiyam", // Replace with your Medium username
-          postsPerLine: 3,
-          limit: 6,
-          picture: "big",
-          fields: ["description", "author", "claps", "publishAt"],
-          ratio: "square",
-          theme: "dark" // This will better match your dark theme
-        }
+      // Wait for the script to be fully loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          if (typeof MediumWidget !== 'undefined') {
+            MediumWidget.Init({
+              renderTo: '#medium-widget',
+              params: {
+                resource: "https://medium.com/@sakhujasaiyam",
+                postsPerLine: 3,
+                limit: 6,
+                picture: "big",
+                fields: ["description", "author", "claps", "publishAt"],
+                ratio: "square",
+                theme: "dark"
+              }
+            });
+          } else {
+            console.error("MediumWidget not loaded");
+          }
+        }, 1000); // Give it a second to load
       });
     </script>
 </body>
