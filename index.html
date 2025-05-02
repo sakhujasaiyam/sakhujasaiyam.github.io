@@ -654,51 +654,60 @@
         }
 
         /* Blog Section */
-        .blog {
-          min-height: auto;
-          padding: 100px 0;
-        }
-        
-        .blog-description {
-          max-width: 600px;
-          margin-bottom: 40px;
-          color: var(--text-secondary);
-          font-size: 18px;
-        }
-        
-        .medium-widget-container {
+        /* Custom styles for the RSS embed */
+        #retainable-rss-embed {
           width: 100%;
           margin-top: 30px;
         }
         
-        /* Customize Medium widget to match your theme */
-        .medium-widget-article__title {
-          font-family: var(--font-sans) !important;
-          color: var(--text-primary) !important;
-        }
-        
-        .medium-widget-article__description {
-          font-family: var(--font-sans) !important;
-          color: var(--text-secondary) !important;
-        }
-        
-        .medium-widget-article__info {
-          font-family: var(--font-mono) !important;
-        }
-        
-        /* Add some hover effects to medium cards */
-        .medium-widget-article {
-          transition: var(--transition) !important;
+        #retainable-rss-embed .retainable-rss-embed-item {
           background-color: var(--secondary-color) !important;
           border-radius: 4px !important;
+          transition: var(--transition) !important;
           overflow: hidden !important;
+          margin-bottom: 20px !important;
         }
         
-        .medium-widget-article:hover {
+        #retainable-rss-embed .retainable-rss-embed-item:hover {
           transform: translateY(-5px) !important;
           box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7) !important;
         }
-
+        
+        #retainable-rss-embed .retainable-rss-embed-item-header img {
+          width: 100% !important;
+          height: auto !important;
+          object-fit: cover !important;
+        }
+        
+        #retainable-rss-embed .retainable-rss-embed-item-title a {
+          color: var(--text-primary) !important;
+          font-family: var(--font-sans) !important;
+          text-decoration: none !important;
+        }
+        
+        #retainable-rss-embed .retainable-rss-embed-item-description {
+          color: var(--text-secondary) !important;
+          font-family: var(--font-sans) !important;
+        }
+        
+        #retainable-rss-embed .retainable-rss-embed-item .cta-button {
+          background-color: transparent !important;
+          color: var(--accent-color) !important;
+          border: 1px solid var(--accent-color) !important;
+          border-radius: 4px !important;
+          font-family: var(--font-mono) !important;
+          font-size: 14px !important;
+          padding: 10px 20px !important;
+          text-decoration: none !important;
+          cursor: pointer !important;
+          transition: var(--transition) !important;
+        }
+        
+        #retainable-rss-embed .retainable-rss-embed-item .cta-button:hover {
+          background-color: rgba(100, 255, 218, 0.1) !important;
+          transform: translateY(-3px) !important;
+        }
+        
         /* Contact Section */
         .contact {
             text-align: center;
@@ -1167,11 +1176,21 @@
     <!-- Blog Section -->
     <section id="blog" class="blog">
         <div class="container">
-            <h2 class="section-title">My Blog</h2>
-            <div class="blog-description">
-                <p>Sharing my thoughts and insights on quantum computing, machine learning algorithms, and their applications in solving real-world problems.</p>
-            </div>
-            <div id="medium-widget" class="medium-widget-container"></div>
+          <h2 class="section-title">My Blog</h2>
+          <div class="blog-description">
+            <p>Sharing my thoughts and insights on quantum computing, machine learning algorithms, and their applications in solving real-world problems.</p>
+          </div>
+          
+          <!-- RSS Feed Embed -->
+          <div id="retainable-rss-embed" 
+               data-rss="https://medium.com/feed/@sakhujasaiyam"
+               data-maxcols="3" 
+               data-layout="grid" 
+               data-poststyle="inline" 
+               data-readmore="Read more" 
+               data-buttonclass="cta-button" 
+               data-offset="-100">
+          </div>
         </div>
     </section>
     
@@ -1507,30 +1526,7 @@
         `);
     </script>
     
-    <!-- Medium Widget -->
-    <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-    <script>
-      // Wait for the script to be fully loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-          if (typeof MediumWidget !== 'undefined') {
-            MediumWidget.Init({
-              renderTo: '#medium-widget',
-              params: {
-                resource: "https://medium.com/@sakhujasaiyam",
-                postsPerLine: 3,
-                limit: 6,
-                picture: "big",
-                fields: ["description", "author", "claps", "publishAt"],
-                ratio: "square",
-                theme: "dark"
-              }
-            });
-          } else {
-            console.error("MediumWidget not loaded");
-          }
-        }, 1000); // Give it a second to load
-      });
-    </script>
+    <!-- Add this script at the end of your body -->
+    <script src="https://www.retainable.app/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 </body>
 </html>
