@@ -653,59 +653,38 @@
             margin-bottom: 5px;
         }
 
-        /* Blog Section */
-        /* Custom styles for the RSS embed */
-        #retainable-rss-embed {
+        /* Blog section */
+        .medium-post {
+          margin-bottom: 30px;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .post-link {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+        }
+        
+        .post-image img {
           width: 100%;
-          margin-top: 30px;
+          height: 200px;
+          object-fit: cover;
         }
         
-        #retainable-rss-embed .retainable-rss-embed-item {
-          background-color: var(--secondary-color) !important;
-          border-radius: 4px !important;
-          transition: var(--transition) !important;
-          overflow: hidden !important;
-          margin-bottom: 20px !important;
+        .post-title {
+          padding: 0 15px;
+          margin: 15px 0 10px;
+          font-size: 18px;
+          color: #333;
         }
         
-        #retainable-rss-embed .retainable-rss-embed-item:hover {
-          transform: translateY(-5px) !important;
-          box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7) !important;
-        }
-        
-        #retainable-rss-embed .retainable-rss-embed-item-header img {
-          width: 100% !important;
-          height: auto !important;
-          object-fit: cover !important;
-        }
-        
-        #retainable-rss-embed .retainable-rss-embed-item-title a {
-          color: var(--text-primary) !important;
-          font-family: var(--font-sans) !important;
-          text-decoration: none !important;
-        }
-        
-        #retainable-rss-embed .retainable-rss-embed-item-description {
-          color: var(--text-secondary) !important;
-          font-family: var(--font-sans) !important;
-        }
-        
-        #retainable-rss-embed .retainable-rss-embed-item .cta-button {
-          background-color: transparent !important;
-          color: var(--accent-color) !important;
-          border: 1px solid var(--accent-color) !important;
-          border-radius: 4px !important;
-          font-family: var(--font-mono) !important;
-          font-size: 14px !important;
-          padding: 10px 20px !important;
-          text-decoration: none !important;
-          cursor: pointer !important;
-          transition: var(--transition) !important;
-        }
-        
-        #retainable-rss-embed .retainable-rss-embed-item .cta-button:hover {
-          background-color: rgba(100, 255, 218, 0.1) !important;
-          transform: translateY(-3px) !important;
+        .post-date, .post-author {
+          padding: 0 15px;
+          margin: 5px 0;
+          font-size: 14px;
+          color: #666;
         }
         
         /* Contact Section */
@@ -1174,22 +1153,11 @@
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="blog">
+    <section id="medium-posts" class="medium-posts">
         <div class="container">
           <h2 class="section-title">My Blog</h2>
           <div class="blog-description">
             <p>Sharing my thoughts and insights on quantum computing, machine learning algorithms, and their applications in solving real-world problems.</p>
-          </div>
-          
-          <!-- RSS Feed Embed -->
-          <div id="retainable-rss-embed" 
-               data-rss="https://medium.com/@sakhujasaiyam"
-               data-maxcols="3" 
-               data-layout="grid" 
-               data-poststyle="inline" 
-               data-readmore="Read more" 
-               data-buttonclass="cta-button" 
-               data-offset="-100">
           </div>
         </div>
     </section>
@@ -1524,9 +1492,48 @@
                 }
             </style>
         `);
-    </script>
+        
+    async function fetchMediumPosts() {
+      // Replace @yourusername with your Medium username
+      const rssUrl = 'https://medium.com/feed/@sakhujasaiyam';
+      
+      // Using rss2json service to convert RSS to JSON
+      const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`);
+      const data = await response.json();
+      
+      if (data.status !== 'ok') {
+        console.error('Error fetching Medium posts');
+        return;
+      }
+      
+      const container = document.getElementById('medium-posts');
+      
+      data.items.forEach(post => {
+        // Extract first image from the post
+        const imageRegex = /<img[^>]+src="([^">]+)"/;
+        const imageMatch = imageRegex.exec(post.description);
+        const imageUrl = imageMatch ? imageMatch[1] : '';
+        
+        // Create post element
+        const postElement = document.createElement('div');
+        postElement.className = 'medium-post';
+        
+        postElement.innerHTML = `
+          <a href="${post.link}" target="_blank" class="post-link">
+            <div class="post-image">
+              <img src="${imageUrl}" alt="${post.title}" />
+            </div>
+            <h3 class="post-title">${post.title}</h3>
+            <p class="post-date">${new Date(post.pubDate).toLocaleDateString()}</p>
+            <p class="post-author">By ${post.author}</p>
+          </a>
+        `;
+        
+        container.appendChild(postElement);
+      });
+    }
     
-    <!-- Add this script at the end of your body -->
-    <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+    document.addEventListener('DOMContentLoaded', fetchMediumPosts);
+    </script>
 </body>
 </html>
